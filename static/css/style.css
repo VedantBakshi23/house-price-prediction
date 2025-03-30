@@ -1,0 +1,148 @@
+body{
+    background: url("/static/img/back1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+section{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+form{
+    display: grid;
+    width: 800px;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+
+}
+header{
+    color: white;
+    display: flex;
+    height:10vh ;
+}
+.logo{
+    display: flex;
+    flex: 3;
+    justify-content: end;
+    align-items: center;
+    margin-right:15px ;
+    font-size: 30px
+
+}
+.title{
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center; 
+    font-size: 50px;
+    background:url("/static/img/text.jpg"); 
+    background-position:center;
+    -webkit-background-clip: text;
+    color: transparent;
+   margin-left: 80px;
+}
+header img{
+    border-style: solid;
+    border-radius:50%;
+    border-color: cyan;
+    border-width: 1px;
+
+}
+footer{
+    height: 10vh;
+}
+select{
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-top:10px ;
+    justify-self: center;
+
+
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+input[type="number"]{
+    width: 190px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding: 2px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-self: center;
+
+
+    font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgb(23, 161, 166);
+    padding: 2px;
+    font-size: 16px;
+    background-color: ;
+    color: black;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 30px;
+    justify-self: center;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    transition: 0.3s;
+    grid-column: span 2;
+    margin-bottom: 20px;
+}
+input[type="submit"]:hover{
+    background-color: sandybrown;
+    color: white;
+    transition: 0.3s;
+}
+input[type="number"]{
+    text-align: center;
+}
+select{
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+    display: grid;
+   justify-content: end;
+   margin-right: 50px;
+}

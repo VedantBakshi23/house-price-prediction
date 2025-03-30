@@ -4,9 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HPP</title>
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    Price {{params}}
+    <header>
+        <div class="title">House Price Prediction</div>
+        <div class="logo"><h3>PRMCEAM</h3></div>
+    </header>
+    
+    <section>
+        <form method="post" action="/">
+            <select name="under_construction" required>
+                <option value="">Under Construction?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <select name="RERA" required>
+                <option value="">RERA Approved?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <select name="BHK_NO" required>
+                <option value="">Number of Rooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+        
+            <select name="RESALE" required>
+                <option value="">Resale?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <input type="number" name="LONGITUDE" placeholder="Longitude" step="any" required>
+            <input type="number" name="LATITUDE" placeholder="Latitude" step="any" required>
+            <input type="number" name="area" placeholder="Area in Sq.ft" step="any" required>
+        
+            <select name="POSTED_BY_Dealer" required>
+                <option value="">Posted by Dealer?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <select name="POSTED_BY_Owner" required>
+                <option value="">Posted by Owner?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <select name="BHK_OR_RK" required>
+                <option value="">BHK or RK?</option>
+                <option value="1">BHK</option>
+                <option value="0">RK</option>
+            </select>
+        
+            <select name="city_tier_2" required>
+                <option value="">City Tier 2?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <select name="city_tier_3" required>
+                <option value="">City Tier 3?</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+        
+            <input type="submit" value="SUBMIT">
+        </form>
+
+        <!-- Display predicted price message here -->
+        
+    </section>
+    {% if message %}
+    <div class="result">
+        <h2>{{ message }} Lakhs</h2>
+    </div>
+    {% endif %}
+    <footer>
+        <div>All rights reserved &copy; 2025</div>
+        <div>Developed by: Vedant Bakshi and team</div>
+    </footer>
 </body>
 </html>
