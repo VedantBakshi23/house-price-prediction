@@ -18,20 +18,23 @@
     
     <section>
         <form method="post" action="/">
-            <select name="under_construction" required>
-                <option value="">Under Construction?</option>
+            <label for="under_construction">Under Construction?</label>
+            <select id="under_construction" name="under_construction" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <select name="RERA" required>
-                <option value="">RERA Approved?</option>
+            <label for="RERA">RERA Approved?</label>
+            <select id="RERA" name="RERA" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <select name="BHK_NO" required>
-                <option value="">Number of Rooms</option>
+            <label for="BHK_NO">Number of Rooms</label>
+            <select id="BHK_NO" name="BHK_NO" required>
+                <option value="">Select</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -40,42 +43,53 @@
                 <option value="6">6</option>
             </select>
         
-            <select name="RESALE" required>
-                <option value="">Resale?</option>
+            <label for="RESALE">Resale?</label>
+            <select id="RESALE" name="RESALE" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <input type="number" name="LONGITUDE" placeholder="Longitude" step="any" required>
-            <input type="number" name="LATITUDE" placeholder="Latitude" step="any" required>
-            <input type="number" name="area" placeholder="Area in Sq.ft" step="any" required>
+            <label for="LONGITUDE">Longitude</label>
+            <input id="LONGITUDE" type="number" name="LONGITUDE" placeholder="Longitude" step="any" required>
+            
+            <label for="LATITUDE">Latitude</label>
+            <input id="LATITUDE" type="number" name="LATITUDE" placeholder="Latitude" step="any" required>
+            
+            <label for="area">Area in Sq.ft</label>
+            <input id="area" type="number" name="area" placeholder="Area in Sq.ft" step="any" required>
         
-            <select name="POSTED_BY_Dealer" required>
-                <option value="">Posted by Dealer?</option>
+            <label for="POSTED_BY_Dealer">Posted by Dealer?</label>
+            <select id="POSTED_BY_Dealer" name="POSTED_BY_Dealer" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <select name="POSTED_BY_Owner" required>
-                <option value="">Posted by Owner?</option>
+            <label for="POSTED_BY_Owner">Posted by Owner?</label>
+            <select id="POSTED_BY_Owner" name="POSTED_BY_Owner" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <select name="BHK_OR_RK" required>
-                <option value="">BHK or RK?</option>
+            <label for="BHK_OR_RK">BHK or RK?</label>
+            <select id="BHK_OR_RK" name="BHK_OR_RK" required>
+                <option value="">Select</option>
                 <option value="1">BHK</option>
                 <option value="0">RK</option>
             </select>
         
-            <select name="city_tier_2" required>
-                <option value="">City Tier 2?</option>
+            <label for="city_tier_2">City Tier 2?</label>
+            <select id="city_tier_2" name="city_tier_2" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
         
-            <select name="city_tier_3" required>
-                <option value="">City Tier 3?</option>
+            <label for="city_tier_3">City Tier 3?</label>
+            <select id="city_tier_3" name="city_tier_3" required>
+                <option value="">Select</option>
                 <option value="1">Yes</option>
                 <option value="0">No</option>
             </select>
@@ -83,17 +97,21 @@
             <input type="submit" value="SUBMIT">
         </form>
 
-        <!-- Display predicted price message here -->
-        
+       
     </section>
-    {% if message %}
-    <div class="result">
-        <h2>{{ message }} Lakhs</h2>
-    </div>
-    {% endif %}
+    
     <footer>
+        <div class="devel">
         <div>All rights reserved &copy; 2025</div>
         <div>Developed by: Vedant Bakshi and team</div>
+        </div>
+        <div class="resultbox">
+            {% if message %}
+            <div class="result">
+                <h2>{{ message }} Lakhs</h2>
+            </div>
+            {% endif %}
+        </div>
     </footer>
 </body>
 </html>
